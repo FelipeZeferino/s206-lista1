@@ -2,9 +2,11 @@
 Este repositório contém os testes automatizados desenvolvidos para a **Lista 1 da disciplina S206 - Testes de Software**, utilizando o framework **Cypress**.
 
 ## 👥 Integrantes
-Felipe Mendes Silva Zeferino, 511 – responsável pela execução dos testes de Orientador
-Leticia Luane Moraes, 352 – responsável pela execução dos testes de Alunos
-Vitor Torres Gonzaga, 517 – responsável pela execução dos testes de Projetos
+
+- **Felipe Mendes Silva Zeferino**, 511 — Testes de **Orientador**
+- **Leticia Luane Moraes**, 352 — Testes de **Alunos**
+- **Vitor Torres Gonzaga**, 517 — Testes de **Projetos**
+
 
 ## 📂 Estrutura do Projeto
 ```plaintext
