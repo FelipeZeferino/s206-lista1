@@ -16,7 +16,7 @@ describe('Aluno', () => {
   it("1. Exibir projetos", () => {
     cy.visit('https://confianopai.com/')
     cy.get('.sc-csKJxZ').click()
-    //cy.get('.sc-eXzmLu').click() // as vezes ele redireciona para a pagina de not found
+    cy.get('.sc-eXzmLu').click() // as vezes ele redireciona para a pagina de not found
     cy.get(':nth-child(2) > .sc-ktwOfi').type("teste.aluno@ges.inatel.br")
     cy.get(':nth-child(3) > .sc-ktwOfi').type("123")
     cy.get('.sc-csKJxZ').click()
@@ -52,7 +52,7 @@ describe('Aluno', () => {
   it("5. Login do aluno com falha (senha incorreta)", () => {
     cy.visit('https://confianopai.com/')
     cy.get('.sc-csKJxZ').click() //logout
-    //cy.get('.sc-eXzmLu').click() // as vezes ele redireciona para a pagina de not found
+    cy.get('.sc-eXzmLu').click() // as vezes ele redireciona para a pagina de not found
     cy.get(':nth-child(2) > .sc-ktwOfi').type("teste.aluno@ges.inatel.br")
     cy.get(':nth-child(3) > .sc-ktwOfi').type("1234")
     cy.get('.sc-csKJxZ').click() 
