@@ -1,5 +1,5 @@
 # 🚀 Testes Automatizados - Lista 1 (S206)
-Este repositório contém os testes automatizados desenvolvidos para a **Lista 1 da disciplina S206 - Testes de Software**, utilizando o framework **Cypress**.
+Este repositório contém os testes automatizados desenvolvidos para a **Lista 1 da disciplina S206 - Qualidade de Software**, utilizando o framework **Cypress**.
 
 ## 👥 Integrantes
 
