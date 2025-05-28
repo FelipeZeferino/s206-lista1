@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-28T12:07:13.027Z",
+    "end": "2025-05-28T12:07:32.105Z",
+    "duration": 19078,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e73e8ea-ea00-4e98-a360-bc250e214608",
+      "title": "",
+      "fullFile": "cypress\\e2e\\orientador.cy.js",
+      "file": "cypress\\e2e\\orientador.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e41b353-8220-4189-a0d0-8ddf8dace6f9",
+          "title": "Orientador",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create Orientador",
+              "fullTitle": "Orientador should create Orientador",
+              "timedOut": null,
+              "duration": 4452,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  id,\n  password,\n  email\n} = orientadorData;\ncy.get('[href=\"/adm/novo-usuario\"]').click();\ncy.get('.sc-dsAqUS').select('Orientador');\ncy.get(':nth-child(1) > .sc-bqOYya > .sc-gHjVMF').type(id);\ncy.get(':nth-child(2) > .sc-bqOYya > .sc-gHjVMF').type(email);\ncy.get(':nth-child(3) > .sc-bqOYya > .sc-gHjVMF').type(password);\ncy.get(':nth-child(4) > .sc-irLvIq > .sc-csKJxZ').click();\ncy.get('.Toastify__toast-body > :nth-child(2)').should('contain.text', 'Usuário criado com sucesso!');",
+              "err": {},
+              "uuid": "999f2cbe-1531-48e5-90e9-2f5f823f1ac5",
+              "parentUUID": "2e41b353-8220-4189-a0d0-8ddf8dace6f9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should NOT create Orientador if username and email is the same",
+              "fullTitle": "Orientador should NOT create Orientador if username and email is the same",
+              "timedOut": null,
+              "duration": 2770,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  id,\n  password,\n  email\n} = orientadorData;\ncy.get('[href=\"/adm/novo-usuario\"]').click();\ncy.get('.sc-dsAqUS').select('Orientador');\ncy.get(':nth-child(1) > .sc-bqOYya > .sc-gHjVMF').type(id);\ncy.get(':nth-child(2) > .sc-bqOYya > .sc-gHjVMF').type(email);\ncy.get(':nth-child(3) > .sc-bqOYya > .sc-gHjVMF').type(password);\ncy.get(':nth-child(4) > .sc-irLvIq > .sc-csKJxZ').click();\ncy.get('.Toastify__toast-body > :nth-child(2)').should('contain.text', 'Falha ao criar usuário.');",
+              "err": {},
+              "uuid": "e054ed60-eb6d-4a71-8012-69d4053124b7",
+              "parentUUID": "2e41b353-8220-4189-a0d0-8ddf8dace6f9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should insert orientador into team",
+              "fullTitle": "Orientador should insert orientador into team",
+              "timedOut": null,
+              "duration": 3816,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  email\n} = orientadorData;\ncy.get('.sc-jdHILj').click();\ncy.get('[href=\"/adm/add-projeto/cadastro\"]').click();\ncy.get('.sc-fYrVWQ > .sc-hsaIUA').type(nomeProjetoTeste);\ncy.get(':nth-child(2) > :nth-child(2) > .sc-hsaIUA').type('userprojeto2030767@gmail.com');\ncy.get(':nth-child(6) > :nth-child(2) > .sc-hsaIUA').type(email);\ncy.get(':nth-child(1) > .sc-bZTyFN > .sc-hlqirL').select('Sem pendências');\ncy.get(':nth-child(2) > .sc-bZTyFN > .sc-hlqirL').select('Projeto Internacional');\ncy.get('.sc-eGgGjL > :nth-child(1)').click();\ncy.get('.Toastify__toast-body > :nth-child(2)').should('contain.text', 'Equipe criada com sucesso!');",
+              "err": {},
+              "uuid": "d7768d67-1a41-4143-a61d-d81c0ebb8f3d",
+              "parentUUID": "2e41b353-8220-4189-a0d0-8ddf8dace6f9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should NOT insert invalid orientador into team",
+              "fullTitle": "Orientador should NOT insert invalid orientador into team",
+              "timedOut": null,
+              "duration": 3686,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  email\n} = orientadorData;\ncy.get('.sc-jdHILj').click();\ncy.get('[href=\"/adm/add-projeto/cadastro\"]').click();\ncy.get('.sc-fYrVWQ > .sc-hsaIUA').type(nomeProjetoTeste);\ncy.get(':nth-child(2) > :nth-child(2) > .sc-hsaIUA').type('userprojeto2030767@gmail.com');\ncy.get(':nth-child(6) > :nth-child(2) > .sc-hsaIUA').type(`${email}1`);\ncy.get(':nth-child(1) > .sc-bZTyFN > .sc-hlqirL').select('Sem pendências');\ncy.get(':nth-child(2) > .sc-bZTyFN > .sc-hlqirL').select('Projeto Internacional');\ncy.get('.sc-eGgGjL > :nth-child(1)').click();\ncy.get('#\\x32  > .Toastify__toast-body > :nth-child(2)').should('contain.text', 'Erro ao criar equipe: Error: Orientador não está cadastrado');",
+              "err": {},
+              "uuid": "b6fde4e1-59f4-4941-ac55-9fdb1d02449b",
+              "parentUUID": "2e41b353-8220-4189-a0d0-8ddf8dace6f9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have new project on project list",
+              "fullTitle": "Orientador should have new project on project list",
+              "timedOut": null,
+              "duration": 1717,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  email\n} = orientadorData;\ncy.get('.sc-ckdEwu').type(nomeProjetoTeste);\ncy.get('.sc-eAKtBH > svg').click();\ncy.get(':nth-child(3) > :nth-child(2)').should('contain.text', email);",
+              "err": {},
+              "uuid": "4d01a1fe-90b7-4caf-9de7-4f6c76d20b51",
+              "parentUUID": "2e41b353-8220-4189-a0d0-8ddf8dace6f9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "999f2cbe-1531-48e5-90e9-2f5f823f1ac5",
+            "e054ed60-eb6d-4a71-8012-69d4053124b7",
+            "d7768d67-1a41-4143-a61d-d81c0ebb8f3d",
+            "b6fde4e1-59f4-4941-ac55-9fdb1d02449b",
+            "4d01a1fe-90b7-4caf-9de7-4f6c76d20b51"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16441,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

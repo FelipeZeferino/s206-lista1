@@ -1,0 +1,209 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-05-28T12:06:24.176Z",
+    "end": "2025-05-28T12:07:10.532Z",
+    "duration": 46356,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6f4ecb0b-33e1-4c04-8ee3-bfda12cb4b33",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Projetos.cy.js",
+      "file": "cypress\\e2e\\Projetos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f2690f55-407e-468c-a5ee-ca3e4acf9796",
+          "title": "Testes de Gestão de Projetos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Deve criar um novo projeto com sucesso",
+              "fullTitle": "Testes de Gestão de Projetos 1. Deve criar um novo projeto com sucesso",
+              "timedOut": null,
+              "duration": 4899,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const testData = generateTestData();\ncy.visit(\"https://confianopai.com/adm/projetos\");\ncy.get(\".sc-jdHILj\").click();\ncy.get('[href=\"/adm/add-projeto/cadastro\"]').click();\ncy.get(\".sc-fYrVWQ > .sc-hsaIUA\").type(testData.projectName);\ncy.get(\":nth-child(2) > :nth-child(2) > .sc-hsaIUA\").type(\"ppppp@gmail.com\");\ncy.get(\":nth-child(6) > :nth-child(2) > .sc-hsaIUA\").type(\"felipeb@inatel.br\");\ncy.get(\":nth-child(1) > .sc-bZTyFN > .sc-hlqirL\").select(\"Com pendência\");\ncy.get(\":nth-child(2) > .sc-bZTyFN > .sc-hlqirL\").select(\"Outro\");\ncy.get(\".sc-eGgGjL > :nth-child(1)\").click();\ncy.get(\".Toastify__toast-body > :nth-child(2)\").should(\"contain\", \"Equipe criada com sucesso\");",
+              "err": {},
+              "uuid": "9f1660bf-96b7-4c65-bc57-86cd2793f242",
+              "parentUUID": "f2690f55-407e-468c-a5ee-ca3e4acf9796",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Deve falhar ao criar projeto sem nome (teste negativo)",
+              "fullTitle": "Testes de Gestão de Projetos 2. Deve falhar ao criar projeto sem nome (teste negativo)",
+              "timedOut": null,
+              "duration": 4156,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://confianopai.com/adm/projetos\");\ncy.get(\".sc-jdHILj\").click();\ncy.get('[href=\"/adm/add-projeto/cadastro\"]').click();\ncy.get(\":nth-child(2) > :nth-child(2) > .sc-hsaIUA\").type(\"ppppp@gmail.com\");\ncy.get(\":nth-child(6) > :nth-child(2) > .sc-hsaIUA\").type(\"felipeb@inatel.br\");\ncy.get(\":nth-child(1) > .sc-bZTyFN > .sc-hlqirL\").select(\"Com pendência\");\ncy.get(\":nth-child(2) > .sc-bZTyFN > .sc-hlqirL\").select(\"Outro\");\ncy.get(\".sc-eGgGjL > :nth-child(1)\").click();\ncy.get(\".Toastify__toast-body > :nth-child(2)\").should(\"contain\", \"Por favor, adicione o nome do projeto\");",
+              "err": {},
+              "uuid": "8b0842a9-5374-41da-88cc-52692a5b357f",
+              "parentUUID": "f2690f55-407e-468c-a5ee-ca3e4acf9796",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3. Deve alterar a paralela do projeto",
+              "fullTitle": "Testes de Gestão de Projetos 3. Deve alterar a paralela do projeto",
+              "timedOut": null,
+              "duration": 6986,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const testData = generateTestData();\ncriarProjetoTeste(testData.projectName, testData.projectMember);\ncy.visit(\"https://confianopai.com/adm/projetos\");\ncy.get(\".sc-ckdEwu\").type(testData.projectName);\ncy.get(\".sc-kMzELR\").contains(testData.projectName).click();\ncy.get(\".sc-gUjWJS > .sc-kiTBBF\").click();\ncy.get(\":nth-child(2) > .sc-ldgOGP\").select(\"Projeto Internacional\");\ncy.get(\".sc-hiTDLB\").click();\ncy.get(\".iTLMzn > .sc-csKJxZ\").click();\ncy.get(\".Toastify__toast-body > :nth-child(2)\").should(\"contain\", \"Projeto atualizado com sucesso!\");",
+              "err": {},
+              "uuid": "f6063fc7-81fb-4235-b314-1018bd70426a",
+              "parentUUID": "f2690f55-407e-468c-a5ee-ca3e4acf9796",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4. Deve falhar ao adicionar membro com email inválido (teste negativo)",
+              "fullTitle": "Testes de Gestão de Projetos 4. Deve falhar ao adicionar membro com email inválido (teste negativo)",
+              "timedOut": null,
+              "duration": 7110,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const testData = generateTestData();\ncriarProjetoTeste(testData.projectName, testData.projectMember);\ncy.visit(\"https://confianopai.com/adm/projetos\");\ncy.get(\".sc-ckdEwu\").type(testData.projectName);\ncy.get(\".sc-kMzELR\").contains(testData.projectName).click();\ncy.get(\".sc-cPtzlb > .sc-irLvIq > .sc-csKJxZ\").click();\ncy.get(\".sc-ppzwM\").type(\"pppppp@gmail.com\");\ncy.get(\".sc-hiTDLB\").click();\ncy.get(\".iTLMzn > .sc-csKJxZ\").click();\ncy.get(\".Toastify__toast-body > :nth-child(2)\").should(\"contain.text\", \"Aluno não cadastrado:\");",
+              "err": {},
+              "uuid": "0f40a126-1052-4ae9-81c2-84211d3fb23a",
+              "parentUUID": "f2690f55-407e-468c-a5ee-ca3e4acf9796",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5. Deve alterar o status do projeto",
+              "fullTitle": "Testes de Gestão de Projetos 5. Deve alterar o status do projeto",
+              "timedOut": null,
+              "duration": 10188,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const testData = generateTestData();\ncriarProjetoTeste(testData.projectName, testData.projectMember);\ncy.visit(\"https://confianopai.com/adm/projetos\");\ncy.get(\".sc-ckdEwu\").type(testData.projectName);\ncy.get(\".sc-kMzELR\").contains(testData.projectName).click();\ncy.get(\".sc-gUjWJS > .sc-kiTBBF\").click();\ncy.get(\":nth-child(1) > .sc-ldgOGP\").select(\"Sem pendências\");\ncy.get(\".sc-hiTDLB\").click();\ncy.get(\".iTLMzn > .sc-csKJxZ\").click();\ncy.get(\".Toastify__toast-body > :nth-child(2)\").should(\"contain\", \"Projeto atualizado com sucesso!\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div>' to contain 'Projeto atualizado com sucesso!'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div>' to contain 'Projeto atualizado com sucesso!'\n    at Context.eval (webpack:///./cypress/e2e/Projetos.cy.js:112:52)",
+                "diff": null
+              },
+              "uuid": "6f797b59-213e-4b9d-aa76-dd4cc617969c",
+              "parentUUID": "f2690f55-407e-468c-a5ee-ca3e4acf9796",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "6. Deve apagar time cadastrado",
+              "fullTitle": "Testes de Gestão de Projetos 6. Deve apagar time cadastrado",
+              "timedOut": null,
+              "duration": 10937,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const testData = generateTestData();\ncriarProjetoTeste(testData.projectName, testData.projectMember);\ncy.visit(\"https://confianopai.com/adm/projetos\");\ncy.get(\".sc-ckdEwu\").type(testData.projectName);\ncy.get(\".sc-kMzELR\").contains(testData.projectName).click();\ncy.get('.sc-iCKXBC > [viewBox=\"0 0 448 512\"]').click();\ncy.get(\".sc-cZpZpK > :nth-child(1)\").click();\ncy.get(\".Toastify__toast-body > :nth-child(2)\").should(\"contain\", \"Time deletado com sucesso!\");\ncy.get(\".sc-ckdEwu\").type(testData.projectName);\ncy.get(\".sc-kMzELR\").should(\"not.exist\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.Toastify__toast-body > :nth-child(2)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.Toastify__toast-body > :nth-child(2)`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/Projetos.cy.js:128:52)",
+                "diff": null
+              },
+              "uuid": "644d2154-5624-469e-89e6-9e481e9af9b6",
+              "parentUUID": "f2690f55-407e-468c-a5ee-ca3e4acf9796",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9f1660bf-96b7-4c65-bc57-86cd2793f242",
+            "8b0842a9-5374-41da-88cc-52692a5b357f",
+            "f6063fc7-81fb-4235-b314-1018bd70426a",
+            "0f40a126-1052-4ae9-81c2-84211d3fb23a"
+          ],
+          "failures": [
+            "6f797b59-213e-4b9d-aa76-dd4cc617969c",
+            "644d2154-5624-469e-89e6-9e481e9af9b6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 44276,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
