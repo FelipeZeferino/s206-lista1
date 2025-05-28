@@ -44,3 +44,9 @@ s206-lista1/
 * Depois utilizaremos o comando “ npx mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome/merged-report.json “para mesclar os arquivos JSON gerados
 * E por fim o comando “ npx marge cypress/reports/mochawesome/merged-report.json --reportDir cypress/reports/mochawesome --reportFilename mochawesome-report” para gerar o relatório HTML final
 * Após isso o relatório estra disponível dentro da pasta Cypress -> reports ->  mochawesome -> mochawesome-report.html
+
+## Observações
+### Alunos
+* Foi adicionada a linha de comando cy.get('.sc-eXzmLu').click() nos testes.
+* Isso ocorreu porque, em algumas execuções, a página exibia o erro "Not Found", interrompendo o fluxo dos testes.
+* Para garantir o funcionamento correto, você pode comentar ou descomentar essa linha conforme necessário, dependendo do comportamento observado durante a execução
