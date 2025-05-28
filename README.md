@@ -20,7 +20,7 @@ s206-lista1/
 
 ## 🚀 Como executar o projeto
 ### 1. Clone o repositório
-```Git bash```
+* Abra o Git bash dentro da pasta que queira utilizar
 * git clone https://github.com/FelipeZeferino/s206-lista1.git
 * cd s206-lista1
 ### 2. Instale as dependências
