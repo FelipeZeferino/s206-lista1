@@ -7,13 +7,16 @@ Leticia Luane Moraes, 352 – responsável pela execução dos testes de Alunos
 Vitor Torres Gonzaga, 517 – responsável pela execução dos testes de Projetos
 
 ## 📂 Estrutura do Projeto
+```plaintext
 s206-lista1/
 ├── cypress/
-│ ├── e2e/ # Arquivos de testes
-│ ├── fixtures/ # Dados de apoio
-│ ├── support/ # Comandos e configurações
-├── cypress.config.js # Configuração do Cypress
-├── package.json # Dependências e scripts
+│   ├── e2e/                   # Arquivos de testes
+│   ├── fixtures/              # Dados de apoio
+│   ├── support/               # Comandos e configurações
+├── cypress.config.js          # Configuração do Cypress
+├── package.json               # Dependências e scripts
+└── README.md                  # Documentação
+```
 
 ## 🚀 Como executar o projeto
 ### 1. Clone o repositório
