@@ -1,6 +1,6 @@
 // <reference = cypress>
 
-describe('Orientador', () => {
+describe('Aluno', () => {
   let alunoData, nomeProjetoTeste;
   before(() => {
       alunoData = createAluno();
